@@ -1,0 +1,27 @@
+<div class="form-container">
+    <h2 class="signup-header">AGRO - Sign Up</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="signUp()" class="signup-form">
+        <mat-form-field>
+            <input type="text" matInput placeholder="First name" formControlName="firstname">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput placeholder="Last name" formControlName="lastname">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="email" matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password" matInput placeholder="New password" formControlName="password" minlength="6">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [matDatepicker]="myDatepicker" placeholder="Birthday" formControlName="birthday">
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+        <mat-radio-group formControlName="gender">
+            <span>Gender</span>
+            <mat-radio-button *ngFor="let gender of genders" [value]="gender" name="gender">{{gender}}</mat-radio-button>
+        </mat-radio-group>
+        <button mat-raised-button color="primary">SIGN UP</button>
+    </form>
+</div>

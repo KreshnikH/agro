@@ -1,0 +1,36 @@
+.form-container {
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+.signup-header {
+    margin-bottom: 40px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-radio-group {
+    margin: 20px 0;
+    span {
+        font-size: 18px;
+        align-self: flex-start;
+        color: rgba(0, 0, 0, 0.54);
+    }
+    .mat-radio-button {
+        margin-left: 30px;
+    }
+}
+
+.mat-raised-button {
+    margin-top: 20px;
+    color: white;
+}

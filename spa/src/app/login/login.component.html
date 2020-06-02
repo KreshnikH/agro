@@ -1,0 +1,12 @@
+<div class="form-container">
+    <h2 class="login-header">AGRO - Log In</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+        <mat-form-field>
+            <input type="email" matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+        <button mat-raised-button color="primary">LOG IN</button>
+    </form>
+</div>
